@@ -8,7 +8,7 @@ WORKDIR print
 
 RUN cmake -B_build -DCMAKE_INSTALL_PREFIX=_install
 RUN cmake --build _build
-RUN cmake --build _build --target hello_world
+RUN cmake --build _build --target install
 
 ENV LOG_PATH ./tests/test.txt
 VOLUME ./tests
