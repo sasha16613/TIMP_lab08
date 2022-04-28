@@ -1,14 +1,14 @@
-name: lab-08
+name: test_Docker
 on: [push]
 jobs:
- build_and_run:
+ build_run:
   runs-on: ubuntu-latest  
   steps:
-    - name: checkout
+    - name: git_clone
       uses: actions/checkout@master
-    - name: build_and_run_my_project_with_docker
+    - name: build_run_project
       run: |
-        docker build -t test_project .
-        mkdir logs
-        docker run test_project > logs/log.txt
-        cat logs/log.txt
+        docker build -t hello_world .
+        mkdir tests
+        docker run hello_world > tests/test.txt
+        cat tests/test.txt
