@@ -14,4 +14,4 @@ ENV LOG_PATH ./tests/test.txt
 VOLUME ./tests
 
 WORKDIR _install/bin
-ENTRYPOINT ./demo
+ENTRYPOINT ./hello_world
