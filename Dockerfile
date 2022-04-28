@@ -10,8 +10,8 @@ RUN cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_instal
 RUN cmake --build _build
 RUN cmake --build _build --target install
 
-ENV LOG_PATH /home/logs/log.txt
-VOLUME /home/logs
+ENV LOG_PATH /home/tests/test.txt
+VOLUME /home/tests
 
 WORKDIR _install/bin
 ENTRYPOINT ./demo
