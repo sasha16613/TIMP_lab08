@@ -1,0 +1,14 @@
+name: lab-08
+on: [push]
+jobs:
+ build_and_run:
+  runs-on: ubuntu-latest  
+  steps:
+    - name: checkout
+      uses: actions/checkout@master
+    - name: build_and_run_my_project_with_docker
+      run: |
+        docker build -t test_project .
+        mkdir logs
+        docker run test_project > logs/log.txt
+        cat logs/log.txt
