@@ -1,7 +1,7 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 RUN apt update
-RUN apt install -yy gcc g++ cmake
+RUN apt install -y gcc g++ cmake
 
 COPY . print/
 WORKDIR print
