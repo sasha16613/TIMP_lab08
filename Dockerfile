@@ -10,7 +10,7 @@ RUN cmake -B_build -DCMAKE_INSTALL_PREFIX=_install
 RUN cmake --build _build
 RUN cmake --build _build --target install
 
-ENV LOG_PATH ./tests/test.txt
+ENV ./tests/test.txt
 VOLUME ./tests
 
 WORKDIR _install/bin
