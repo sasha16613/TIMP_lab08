@@ -4,8 +4,7 @@ jobs:
  build_run:
   runs-on: ubuntu-latest  
   steps:
-    - name: git_clone
-      uses: actions/checkout@master
+  
     - name: build_run_project
       run: |
         docker build -t hello_world .
